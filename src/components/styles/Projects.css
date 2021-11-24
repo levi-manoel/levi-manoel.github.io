@@ -1,0 +1,30 @@
+.projetos-links-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  padding-top: 1.5em;
+}
+
+.projetos-links {
+  padding: 0.25em 0.5em;
+}
+
+.projetos-links:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+.card-projeto {
+  padding: 2em 1em;
+  margin: 0.5em 0;
+  border-radius: 15px;
+  background-color: rgb(120, 120, 120);
+}
+
+@media screen and (min-width: 600px) {
+  .metade-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}

@@ -1,0 +1,34 @@
+header {
+  background-color: rgb(80, 80, 80);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em 2em;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  gap: 1em;
+}
+
+li {
+  list-style: none;
+  font-size: larger;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    display: none;
+  }
+}

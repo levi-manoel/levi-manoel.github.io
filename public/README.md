@@ -1,0 +1,38 @@
+### Olá, me chamo Levi Manoel
+
+
+- 🔭 Atualmente trabalho em projetos pessoais e de estudos
+- 🌱 Estudando Desenvolvimento Web na Trybe
+- 📫 E-mail para contato: levimanoel.deob@gmail.com
+
+ <div>
+  <a href="https://github.com/levi-manoel">
+  <img height="163em" src="https://github-readme-stats.vercel.app/api?username=levi-manoel&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=levi-manoel&layout=compact&langs_count=7&theme=dracula"/>
+</div>
+  
+<div style="display: inline_block">
+  <img align="center" alt="Levi-Js" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="Levi-HTML" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+  <img align="center" alt="Levi-CSS" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+  <img align="center" alt="Levi-VSCODE" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
+  <img align="center" alt="Levi-REACT" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+  <img align="center" alt="Levi-JEST" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg">
+  <img align="center" alt="Levi-REDUX" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg">
+  <img align="center" alt="Levi-NPM" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg">
+  <img align="center" alt="Levi-LINUX" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
+  <img align="center" alt="Levi-GIT" heigth="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+  <img align="center" alt="Levi-UNIX" heigth="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unix/unix-original.svg" />
+  <img align="center" alt="Levi-DOCKER" heigth="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
+</div>
+  
+  ## 
+
+<div> 
+  <a href="https://instagram.com/levi_manoel" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+  <a href = "mailto:levimanoel.deob@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/levi-manoel/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>  
+ 
+  ![Snake animation](https://github.com/rafaballerini/rafaballerini/blob/output/github-contribution-grid-snake.svg)
+ 
+</div>
