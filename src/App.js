@@ -1,4 +1,4 @@
-import { Routes, Route  } from 'react-router';
+import {Switch, Route} from 'react-router-dom';
 
 import Home from './pages/Home';
 import EasterEgg from './pages/EasterEgg';
@@ -9,11 +9,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Routes basename={process.env.PUBLIC_URL}>
-        <Route path="/levi-manoel" element={ <Home /> } />
-        <Route path="/levi-manoel/easter" element={ <EasterEgg /> } />
-        <Route path="/levi-manoel/denis" element={ <NiverDenis /> } />
-      </Routes>
+       <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/easter" component={EasterEgg} />
+        <Route exact path="/denis" component={NiverDenis} />
+       </Switch>
     </div>
   );
 }

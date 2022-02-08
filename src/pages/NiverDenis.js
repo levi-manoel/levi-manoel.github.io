@@ -106,7 +106,7 @@ function NiverDenis() {
           <h3>Centro de treinamento</h3>
           <p>Após atingir o nível de mais procurada, fundou um centro para treinamento de novos integrantes de sua quadrilha</p>
           <p>Na imagem abaixo podemos vê-lá infiltrada em uma das aulas para determinar a qualidade de seus novos servos</p>
-          <img src="https://imgur.com/muA8Q00" alt="lider no CT"/>
+          <img src="https://i.imgur.com/muA8Q00.jpg" alt="lider no CT"/>
 
           <h3>Cuidado ao se aproximar</h3>
           <p>A história por trás da imagem abaixo é deveras triste. Um de nossos espiões foi falar com soneca para coletar informações, mas ao fazer isso no seu horário de refeição mal sabia ele que isso seria a última coisa que ele veria.</p>
