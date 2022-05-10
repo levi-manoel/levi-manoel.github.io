@@ -6,3 +6,7 @@
   box-sizing: border-box;
   font-family: 'Open Sans Condensed', sans-serif;
 }
+
+html {
+  background-color: #263045;
+}

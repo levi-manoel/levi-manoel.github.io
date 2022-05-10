@@ -1,56 +1,20 @@
-.section-template {
-  max-width: 100%;
+.App {
+  height: 100%;
+  width: 100%;
+  min-height: 80vh;
+  padding: 3rem 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 5em 1em;
-  font-size: larger;
 }
 
-.projetos-links {
-  background-color: black;
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
 }
 
-#hero {
-  height: 100vh;
-  padding-top: 1em;
-  font-size: xx-large;
-}
-
-#sobre-mim {
-  background-color: black;
-  color: white;
-}
-
-#projetos {
-  background-color: white;
-}
-
-#habilidades {
-  background-color: black;
-  color: white;
-  padding-bottom: 5em;
-}
-
-h3 {
-  padding: 1em 0;
-}
-
-@media screen and (min-width: 600px) {
-  #hero {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  #sobre-mim {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-  }
-  
-  #habilidades {
-    background-color: black;
-    color: white;
-  }
-}
