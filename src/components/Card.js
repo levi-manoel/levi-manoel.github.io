@@ -7,6 +7,7 @@ function Card(props) {
   return (
     <div className='card'>
       <h3>{ title }</h3>
+      <hr />
       <p>{ text }</p>
     </div>
   );

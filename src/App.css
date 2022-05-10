@@ -18,3 +18,7 @@
   max-width: 800px;
 }
 
+hr {
+  width: 65vw;
+  margin: 2em 0;
+}
