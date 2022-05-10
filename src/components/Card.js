@@ -4,17 +4,9 @@ import { Link } from 'react-router-dom';
 import './styles/Card.css';
 
 function Card(props) {
-  const { title, text, linkTo, url } = props;
-
-  const returnCard = url ? (
-    <a href={ url }>
-      <div className='card'>
-        <h3>{ title }</h3>
-        <hr />
-        <p>{ text }</p>
-      </div>
-    </a>
-  ) : (
+  const { title, text, linkTo} = props;
+  
+  return (
     <Link to={ linkTo }>
       <div className='card'>
         <h3>{ title }</h3>
@@ -23,8 +15,6 @@ function Card(props) {
       </div>
     </Link>
   );
-  
-  return returnCard;
 }
 
 export default Card;

@@ -15,6 +15,22 @@ function App() {
         <Route exact path="/denis" component={NiverDenis} />
         <Route exact path="/sobre" component={Sobre} />
         <Route exact path="/projetos" component={Projetos} />
+        <Route
+          exact
+          path="/linkedin"
+          component={() => {
+            window.location.replace('https://linkedin.com/in/levi-manoel');
+            return null;
+          }}
+        />
+        <Route
+          exact
+          path="/github"
+          component={() => {
+            window.location.replace('https://github.com/levi-manoel');
+            return null;
+          }}
+        />
        </Switch>
     </div>
   );
