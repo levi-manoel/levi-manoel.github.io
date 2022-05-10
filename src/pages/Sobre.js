@@ -9,7 +9,7 @@ function Sobre() {
       />
       <hr />
       <main>
-        eu
+        <a href="https://imgur.com/X6KnK4k"><img alt="" src="https://i.imgur.com/X6KnK4k.gif" title="source: imgur.com" /></a>
       </main>
     </>
   );
