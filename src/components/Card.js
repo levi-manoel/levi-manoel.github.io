@@ -10,7 +10,6 @@ function Card(props) {
     <a href={ url }>
       <div className='card'>
         <h3>{ title }</h3>
-        sale
         <hr />
         <p>{ text }</p>
       </div>
