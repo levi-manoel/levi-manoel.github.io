@@ -11,6 +11,10 @@
   background-color: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 .card:first-of-type {
   height: 189px;
 }
