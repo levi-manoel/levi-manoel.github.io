@@ -7,6 +7,7 @@ function Home() {
   return (
     <>
       <Header />
+      <hr />
       <main>
         <div className='grid'>
           <Card title="Sobre mim" text="Veja minhas habilidades e um pouco da caminhada até aqui" />
