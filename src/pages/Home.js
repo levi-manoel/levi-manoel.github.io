@@ -6,7 +6,10 @@ import Card from '../components/Card';
 function Home() {
   return (
     <>
-      <Header />
+      <Header
+        title="Levi Manoel"
+        subtitle="Desenvolvedor Full-Stack"
+      />
       <hr />
       <main>
         <div className='grid'>

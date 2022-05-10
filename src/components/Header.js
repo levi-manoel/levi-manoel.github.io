@@ -2,14 +2,15 @@ import React from 'react';
 
 import './styles/Header.css';
 
-function Header() {
+function Header(props) {
+  const { title, subtitle } = props;
   return (
     <header>
       <h1>
-        Levi Manoel
+        { title }
       </h1>
       <h2>
-        Desenvolvedor Full-Stack
+        { subtitle }
       </h2>
     </header>
   );

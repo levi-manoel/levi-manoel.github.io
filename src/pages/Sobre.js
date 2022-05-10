@@ -1,11 +1,12 @@
 import React from 'react';
+import Header from '../components/Header';
 
 function Sobre() {
   return (
     <>
-      <h1>
-        Sobre Mim
-      </h1>
+      <Header
+        title="Sobre mim"
+      />
       <hr />
       <main>
         eu

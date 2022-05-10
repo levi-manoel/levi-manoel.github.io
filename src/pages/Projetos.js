@@ -1,11 +1,12 @@
 import React from 'react';
+import Header from '../components/Header';
 
 function Projetos() {
   return (
     <>
-      <h1>
-        Projetos
-      </h1>
+      <Header
+        title="Projetos"
+      />
       <hr />
       <main>
         eles
