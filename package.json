@@ -1,7 +1,7 @@
 {
   "name": "levi-manoel-portfolio",
   "version": "0.1.0",
-  "homepage": "http://levi-manoel.github.io/levi-manoel",
+  "homepage": "https://levi-manoel.vercel.app/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.1",
