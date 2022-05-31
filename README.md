@@ -7,6 +7,8 @@
 
 - 📫 How to reach me **levimanoel.deob@gmail.com**
 
+- Don't judge me by my contribution here on **Github**, I'm actually working on **Gitlab**
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/levi-manoel" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="levi-manoel" height="30" width="40" /></a>
