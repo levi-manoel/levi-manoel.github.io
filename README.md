@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Levi Manoel</h1>
 <h3 align="center">A fullstack developer from Brazil</h3>
 
-- 🔭 I’m currently working on [iRancho](irancho.com.br)
+- 🔭 I’m currently working on [iRancho](https://irancho.com.br)
 
-- 👨‍💻 All of my projects are available at [levi-manoel.vercel.app](levi-manoel.vercel.app)
+- 👨‍💻 All of my projects are available at [levi-manoel.vercel.app](https://levi-manoel.vercel.app)
 
 - 💬 Ask me about **vue, react, node and mysql**
 
