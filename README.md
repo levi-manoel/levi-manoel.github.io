@@ -5,8 +5,6 @@
 
 - 👨‍💻 All of my projects are available at [levi-manoel.vercel.app](https://levi-manoel.vercel.app)
 
-- 💬 Ask me about **vue, react, node and mysql**
-
 - 📫 How to reach me **levimanoel.deob@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
