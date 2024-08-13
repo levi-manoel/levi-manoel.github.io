@@ -1,5 +1,9 @@
-<h1 align="center">Hi 👋, I'm Levi Manoel</h1>
-<h3 align="center">A fullstack developer from Brazil</h3>
+<h1 align="center">
+Levi Manoel
+</h1>
+<h3 align="center">
+A fullstack developer from Brazil
+</h3>
 
 - 🔭 I’m currently working on [iRancho](https://irancho.com.br)
 
