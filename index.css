@@ -168,13 +168,13 @@ th {
   width: 100%;
 }
 
-.header {
+.header, .footer {
   margin-bottom: calc(var(--line-height) * 2);
 }
-.header h1 {
+.header h1, .footer h1 {
   margin: 0;
 }
-.header tr td:last-child {
+.header tr td:last-child, .footer tr td:last-child {
   text-align: right;
 }
 
