@@ -1,6 +1,6 @@
 ---
 title: Levi Manoel
-subtitle: Full Stack Developer
+subtitle: Software Engineer
 github-username: levi-manoel
 github-url: "https://github.com/levi-manoel"
 linkedin-username: levi-manoel
@@ -13,7 +13,7 @@ version: v0.1.2
 
 ## Introduction
 
-Hey, I'm Levi Manoel, a full stack developer with experience in JavaScript, TypeScript, Rust, SQL, NoSQL, web development and Google Cloud Platform. Right now, I'm studying to become a data engineer, and I'm also getting my hands dirty with C.
+Hey, I'm Levi Manoel, a software engineer with experience in JavaScript, TypeScript, Rust, SQL, NoSQL, web development and Google Cloud Platform. Right now, I'm studying to become a data engineer, and I'm also getting my hands dirty with C.
 
 When I'm not coding, I'm probably battling with Neovim — and losing most of the time -- and coding.
 
@@ -23,7 +23,7 @@ None at all, for now...
 
 ## Work Experience
 
-#### Full Stack Developer at [iRancho](http://www.irancho.com.br)
+#### Software Engineer at [iRancho](http://www.irancho.com.br)
 - May 2022 - Present
 - JavaScript, TypeScript, Rust, microservices, MySQL, PostgreSQL, etc...
 
@@ -38,7 +38,7 @@ None at all, for now...
       . Worked with colleagues to redesign critical systems for improved performance and user experience, including optimizing batch processing architecture to handle a 10x increase in data volume, resulting in reduced infrastructure costs.<br /><br />
       . Provided guidance and support to the team on maintaining the production environment, implementing new features and improvements, and troubleshooting issues in mobile and web applications.<br /><br />
       . Collaborated on the development and maintenance of offline-first features and Bluetooth communication functionalities.<br /><br />
-      . Assisted in identifying and addressing vulnerabilities to ensure system security.<br /><br />
+      . Assisted in identifying and addressing vulnerabilities to ensure system security.
 </details>
 <details>
       <summary>Data Engineering</summary>
