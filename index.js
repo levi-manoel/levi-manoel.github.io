@@ -91,7 +91,7 @@ function checkOffsets() {
     "TH",
   ]);
   const cell = gridCellDimensions();
-  const elements = document.querySelectorAll("body :not(.debug-grid, .debug-toggle)");
+  const elements = document.querySelectorAll("body");
   for (const element of elements) {
     if (ignoredTagNames.has(element.tagName)) {
       continue;
@@ -111,10 +111,3 @@ function checkOffsets() {
     }
   }
 }
-
-const debugToggle = document.querySelector(".debug-toggle");
-function onDebugToggle() {
-  document.body.classList.toggle("debug", debugToggle.checked);
-}
-debugToggle.addEventListener("change", onDebugToggle);
-onDebugToggle();

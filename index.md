@@ -23,7 +23,7 @@ None at all, for now...
 
 ## Work Experience
 
-#### Fullstack Developer at [iRancho](http://www.irancho.com.br)
+#### Full Stack Developer at [iRancho](http://www.irancho.com.br)
 - May 2022 - Present
 - JavaScript, TypeScript, Rust, microservices, MySQL, PostgreSQL, etc...
 
@@ -53,3 +53,20 @@ None at all, for now...
 
 #### Web development at [Trybe](https://www.betrybe.com/)
 - June 2021 - June 2022
+
+<details>
+    <summary>Fundamentals of Web Development</summary>
+    . The person that has received this certification has completed the Fundamentals of Web Development module successfully. During this module, the following skills were learned: Unix & Bash, Git, JS Basic & DOM, HTML, CSS, JS ES6, Higher Order Functions and Unit Tests, and agile.
+</details>
+<details>
+    <summary>Front-End</summary>
+    . The person that has received this certification has completed the Front-End Development module successfully. During this module, the following skills were learned: Life Cycle, State and Events, Controlled Components, Router, RTL Tests, Redux with React, Context API, React Hooks, agile and soft skills.
+</details>
+<details>
+    <summary>Back-End</summary>
+    . The person that has received this certification has completed the Back-End Development module successfully. During this module, the following skills were learned: Docker, data base SQL and NoSQL, Node.js and Express, Mocha, Chai and Sinon, APIs, REST, JWT, ORM, deploy, TypeScript, POO, SOLID, concepts of CI/CD with Github Actions.
+</details>
+<details>
+    <summary>Computer Science</summary>
+    . The student that has received this certification has completed the Computer Science module successfully. During this module, the following skills were learned: Python and OOP, Algorithms and Complexity, Data Structure and Problem Solving, agile and soft skills.
+</details>
