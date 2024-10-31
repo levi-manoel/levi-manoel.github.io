@@ -3,15 +3,17 @@ title: Levi Manoel
 subtitle: Full Stack Developer
 github-username: levi-manoel
 github-url: "https://github.com/levi-manoel"
-date: 2024-08-29
+linkedin-username: levi-manoel
+linkedin-url: "https://www.linkedin.com/in/levi-manoel/"
+date: 2024-10-30
 lang: en
 toc-title: Contents
-version: v0.1.0
+version: v0.1.2
 ---
 
 ## Introduction
 
-Hey, I'm Levi Manoel, a full stack developer with experience in JavaScript, TypeScript, Rust, SQL, NoSQL, web development and Google Cloud Platform. Right now, I'm studying data management to become a DBA, and I'm also getting my hands dirty with C.
+Hey, I'm Levi Manoel, a full stack developer with experience in JavaScript, TypeScript, Rust, SQL, NoSQL, web development and Google Cloud Platform. Right now, I'm studying to become a data engineer, and I'm also getting my hands dirty with C.
 
 When I'm not coding, I'm probably battling with Neovim — and losing most of the time -- and coding.
 
@@ -45,7 +47,7 @@ None at all, for now...
 
 ## Education
 
-#### Integrated Technical Course, Internet Computing Technician at [Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano](https://portal.ifpe.edu.br/belo-jardim)
+#### Integrated Technical Course, Internet Computing Technician at [Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano](https://portal.ifpe.edu.br/belo-jardim/)
 - January 2018 - December 2020
 
 
