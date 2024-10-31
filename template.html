@@ -33,22 +33,17 @@ $include-before$
 $endfor$
 <table class="header">
   <tr>
-    <td colspan="2" rowspan="2" class="width-auto">
+    <td colspan="4" rowspan="2" class="width-auto" style="text-align: center;">
       <h1 class="title">$title$</h1>
       <span class="subtitle">$subtitle$</span>
     </td>
-    <th>Version</th>
-    <td class="width-min">$version$</td>
   </tr>
   <tr>
-    <th>Updated</th>
-    <td class="width-min"><time style="white-space: pre;">$date$</time></td>
   </tr>
   <tr>
-    <th class="width-min"><a href="$github-url$"><cite>Github</cite></a></th>
-    <td class="width-auto"><a href="$linkedin-url$"><cite>LinkedIn</cite></a></td>
-    <th class="width-min"></th>
-    <td></td>
+    <td colspan="4" rowspan="2" class="width-auto" style="text-align: center;">
+      <a href="$github-url$"><cite>Github</cite></a> | <a href="$linkedin-url$"><cite>LinkedIn</cite></a>
+    </td>
   </tr>
 </table>
 $if(abstract)$

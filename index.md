@@ -5,7 +5,7 @@ github-username: levi-manoel
 github-url: "https://github.com/levi-manoel"
 linkedin-username: levi-manoel
 linkedin-url: "https://www.linkedin.com/in/levi-manoel/"
-date: 2024-10-30
+date: 2024-10-31
 lang: en
 toc-title: Contents
 version: v0.1.2

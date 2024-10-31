@@ -1,7 +1,7 @@
-@import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+@import url('https://fonts.cdnfonts.com/css/victor-mono');
 
 :root {
-  --font-family: "JetBrains Mono", monospace;
+  --font-family: "Victor Mono", monospace;
   --line-height: 1.20rem;
   --border-thickness: 2px;
   --text-color: #0D1117;
