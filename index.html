@@ -5,17 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Levi Manoel - Software Engineer</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
-    @import url('https://fonts.cdnfonts.com/css/victor-mono');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
 
-    body {
-      font-family: 'Victor Mono', monospace;
-      background-color: #1a1a1a;
-      color: #ffffff;
-      line-height: 1.6;
+    :root {
+      --bg-color: #1a1a1a;
+      --text-color: #e0e0e0;
+      --accent-color: #e0e0e0;
+      --card-bg: #2a2a2a;
+      --border-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font-family: 'IBM Plex Mono', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .container {
@@ -25,80 +37,228 @@
     }
 
     header {
-      border-bottom: 1px solid #333;
-      padding: 20px 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    h1,
-    h2 {
-      margin-bottom: 10px;
+    .header-content {
+      text-align: center;
+      z-index: 1;
     }
 
-    a {
-      color: #58a6ff;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: var(--text-color);
+    }
+
+    nav {
+      margin-top: 2rem;
+    }
+
+    .nav-link {
+      color: var(--text-color);
       text-decoration: none;
+      font-size: 1rem;
+      margin: 0 1rem;
+      position: relative;
+      transition: color 0.3s;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -3px;
+      left: 0;
+      background-color: var(--accent-color);
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out;
     }
 
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-right: 10px;
+    .nav-link:hover::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 4rem 0;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var(--accent-color);
     }
 
     .card {
-      background-color: #2a2a2a;
+      background-color: var(--card-bg);
       border-radius: 5px;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .badge {
-      display: inline-block;
-      background-color: #444;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 3px;
-      margin-right: 5px;
-      margin-bottom: 5px;
+    .card:hover {
+      /* transform: translateY(-5px); */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
-    details {
-      margin-top: 10px;
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
     }
 
-    summary {
+    .skill-item {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      padding: 1rem;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .skill-item:hover {
+      background-color: var(--card-bg);
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .experience-item {
+      background-color: var(--card-bg);
+      border-radius: 5px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .experience-title {
+      font-size: 1.2rem;
+      color: var(--accent-color);
+    }
+
+    .experience-date {
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+
+    .experience-details {
+      margin-top: 1rem;
+    }
+
+    .experience-details summary {
       cursor: pointer;
+      color: var(--accent-color);
       font-weight: bold;
     }
 
-    ul {
-      padding-left: 20px;
+    .experience-details[open] summary {
+      margin-bottom: 1rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .project-item {
+      background-color: var(--card-bg);
+      border-radius: 5px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .project-description {
+      margin-bottom: 1rem;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-tech-item {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.8rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-link {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
     }
 
     footer {
-      border-top: 1px solid #333;
-      padding: 20px 0;
+      background-color: var(--card-bg);
+      color: var(--text-color);
       text-align: center;
-      font-size: 0.9em;
-      color: #888;
+      padding: 2rem 0;
+      position: relative;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      header .container {
+      .experience-header {
         flex-direction: column;
-        align-items: center;
       }
 
-      header .container>div {
-        margin-bottom: 20px;
+      .experience-date {
+        margin-top: 0.5rem;
       }
     }
   </style>
@@ -106,148 +266,138 @@
 
 <body>
   <header>
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-      <div>
-        <h1>Levi Manoel</h1>
-        <p style="color: #888;">Software Engineer</p>
-      </div>
-      <div>
-        <a href="https://github.com/levi-manoel" target="_blank" class="button">GitHub</a>
-        <a href="https://www.linkedin.com/in/levi-manoel/" target="_blank" class="button">LinkedIn</a>
-      </div>
+    <div class="header-content">
+      <h1>Levi Manoel</h1>
+      <p class="subtitle">Software Engineer</p>
+      <nav>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      <h2>Introduction</h2>
-      <div class="card">
-        <p>
-          Hey, I'm Levi Manoel, a software engineer with experience in JavaScript, TypeScript, Rust, SQL, NoSQL, web
-          development and Google Cloud Platform. Right now, I'm studying to become a data engineer, and I'm also getting
-          my
-          hands dirty with C.
-        </p>
-        <p>
-          When I'm not coding, I'm probably battling with Neovim — and losing most of the time – and coding.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <div class="card">
-        None at all, for now…
-      </div>
-      <!-- <div class="card">
-        <h3>Personal Portfolio Website</h3>
-        <p>A showcase of my skills and experiences</p>
-        <p>
-          This very website you're looking at! Built with HTML and CSS, it demonstrates my ability to create clean,
-          responsive web pages with a monospaced aesthetic.
-        </p>
-        <div>
-          <span class="badge">HTML</span>
-          <span class="badge">CSS</span>
+  <main>
+    <div class="container">
+      <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+          <p>
+            Hey, I'm Levi Manoel, a software engineer with experience in JavaScript, TypeScript, Rust, SQL, NoSQL, web
+            development and Google Cloud Platform. Currently, I'm studying to become a data engineer, and I'm also getting
+            my hands dirty with C.
+          </p>
+          <p>
+            When I'm not coding, I'm probably battling with Neovim — and losing most of the time – and coding.
+          </p>
         </div>
-        <div style="margin-top: 10px;">
-          <a href="https://github.com/levi-manoel/levi-manoel.github.io" target="_blank" class="button">View Source</a>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skill-grid">
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">TypeScript</div>
+          <div class="skill-item">Rust</div>
+          <div class="skill-item">SQL</div>
+          <div class="skill-item">NoSQL</div>
+          <div class="skill-item">React</div>
+          <div class="skill-item">Node.js</div>
+          <div class="skill-item">Google Cloud</div>
+          <div class="skill-item">Docker</div>
+          <div class="skill-item">Microservices</div>
+          <div class="skill-item">Git</div>
+          <div class="skill-item">RESTful APIs</div>
         </div>
-      </div> -->
-    </section>
+      </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <div class="card">
-        <h3>Software Engineer at iRancho</h3>
-        <p>May 2022 - Present</p>
-        <p>JavaScript, TypeScript, Rust, microservices, MySQL, PostgreSQL, etc…</p>
-        <details>
-          <summary>Software Engineering</summary>
-          <ul>
-            <li>Pioneered the company's adoption of microservices, designing and implementing the first service within
-              this architecture, which laid the groundwork for future development.</li>
-            <li>Developed a standardized, user-friendly reporting feature that was subsequently adopted across the
-              organization, enhancing data accessibility and analysis for end-users.</li>
-            <li>Gained a deep understanding of the agricultural domain, including agronomy principles, enabling
-              effective collaboration and contribution to projects with domain experts.</li>
-            <li>Excelled in a support role, demonstrating a commitment to resolving user issues, even in challenging
-              situations, and consistently providing exceptional service.</li>
-            <li>Collaborated on the development of a blockchain-based infrastructure for beef supply chain traceability,
-              enhancing product transparency, consumer trust, and sustainability while ensuring compliance with
-              governmental norms.</li>
-            <li>Supported the development team by participating in technical interviews and streamlining onboarding
-              processes, which accelerated new hire time-to-productivity.</li>
-            <li>Worked with colleagues to redesign critical systems for improved performance and user experience,
-              including optimizing batch processing architecture to handle a 10x increase in data volume, resulting in
-              reduced infrastructure costs.</li>
-            <li>Provided guidance and support to the team on maintaining the production environment, implementing new
-              features and improvements, and troubleshooting issues in mobile and web applications.</li>
-            <li>Collaborated on the development and maintenance of offline-first features and Bluetooth communication
-              functionalities.</li>
-            <li>Assisted in identifying and addressing vulnerabilities to ensure system security.</li>
-          </ul>
-        </details>
-        <details>
-          <summary>Data Engineering</summary>
-          <p>Not yet… (maybe never, we'll see)</p>
-        </details>
-      </div>
-    </section>
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+          <div class="project-item">
+            None at all, yet.
+            <!-- <h3 class="project-title">Task Management API</h3>
+            <p class="project-description">
+              A RESTful API for managing tasks and projects, built with Node.js and Express. Features include user authentication, task creation, assignment, and status tracking.
+            </p>
+            <div class="project-tech">
+              <span class="project-tech-item">Node.js</span>
+              <span class="project-tech-item">Express</span>
+              <span class="project-tech-item">MongoDB</span>
+              <span class="project-tech-item">JWT</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">GitHub</a>
+              <a href="#" class="project-link">Live Demo</a>
+            </div> -->
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Education</h2>
-      <div class="card">
-        <h3>Integrated Technical Course, Internet Computing Technician at Instituto Federal de Educação, Ciência e
-          Tecnologia do Sertão Pernambucano</h3>
-        <p>January 2018 - December 2020</p>
-      </div>
-      <div class="card">
-        <h3>Web development at Trybe</h3>
-        <p>June 2021 - June 2022</p>
-        <details>
-          <summary>Fundamentals of Web Development</summary>
-          <p>
-            The person that has received this certification has completed the Fundamentals of Web Development module
-            successfully. During this module, the following skills were learned: Unix & Bash, Git, JS Basic & DOM, HTML,
-            CSS, JS ES6, Higher Order Functions and Unit Tests, and agile.
-          </p>
-        </details>
-        <details>
-          <summary>Front-End</summary>
-          <p>
-            The person that has received this certification has completed the Front-End Development module successfully.
-            During this module, the following skills were learned: Life Cycle, State and Events, Controlled Components,
-            Router, RTL Tests, Redux with React, Context API, React Hooks, agile and soft skills.
-          </p>
-        </details>
-        <details>
-          <summary>Back-End</summary>
-          <p>
-            The person that has received this certification has completed the Back-End Development module successfully.
-            During this module, the following skills were learned: Docker, data base SQL and NoSQL, Node.js and Express,
-            Mocha, Chai and Sinon, APIs, REST, JWT, ORM, deploy, TypeScript, POO, SOLID, concepts of CI/CD with Github
-            Actions.
-          </p>
-        </details>
-        <details>
-          <summary>Computer Science</summary>
-          <p>
-            The student that has received this certification has completed the Computer Science module successfully.
-            During
-            this module, the following skills were learned: Python and OOP, Algorithms and Complexity, Data Structure
-            and
-            Problem Solving, agile and soft skills.
-          </p>
-        </details>
-      </div>
-    </section>
+      <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-grid">
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3 class="experience-title">Software Engineer at iRancho</h3>
+              <span class="experience-date">May 2022 - Present</span>
+            </div>
+            <p>JavaScript, TypeScript, Rust, microservices, MySQL, PostgreSQL, etc…</p>
+            <details class="experience-details">
+              <summary>Software Engineering</summary>
+              <ul>
+                <li>Pioneered the company's adoption of microservices, designing and implementing the first service within
+                  this architecture, which laid the groundwork for future development.</li>
+                <li>Developed a standardized, user-friendly reporting feature that was subsequently adopted across the
+                  organization, enhancing data accessibility and analysis for end-users.</li>
+                <li>Gained a deep understanding of the agricultural domain, including agronomy principles, enabling
+                  effective collaboration and contribution to projects with domain experts.</li>
+                <li>Excelled in a support role, demonstrating a commitment to resolving user issues, even in challenging
+                  situations, and consistently providing exceptional service.</li>
+                <li>Collaborated on the development of a blockchain-based infrastructure for beef supply chain traceability,
+                  enhancing product transparency, consumer trust, and sustainability while ensuring compliance with
+                  governmental norms.</li>
+              </ul>
+            </details>
+            <details class="experience-details">
+              <summary>Data Engineering</summary>
+              <p>Not yet… (maybe never, we'll see)</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>Trybe</p>
+          <p>June 2021 - June 2022</p>
+          <details>
+            <summary>Course Details</summary>
+            <ul>
+              <li>Fundamentals of Web Development: Unix & Bash, Git, JS Basic & DOM, HTML, CSS, JS ES6, Higher Order Functions and Unit Tests, and agile methodologies.</li>
+              <li>Front-End: Component Life Cycle, State and Events, Controlled Components, Router, RTL Tests, Redux with React, Context API, React Hooks, agile methodologies and soft skills.</li>
+              <li>Back-End: Docker, SQL and NoSQL databases, Node.js and Express, Mocha, Chai and Sinon, APIs, REST, JWT, ORM, deployment, TypeScript, OOP, SOLID, concepts of CI/CD with Github Actions.</li>
+              <li>Computer Science: Python and OOP, Algorithms and Complexity, Data Structures and Problem Solving, agile methodologies and soft skills.</li>
+            </ul>
+          </details>
+        </div>
+        <div class="card">
+          <h3>Integrated Technical Course, Internet Computing Technician</h3>
+          <p>Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano</p>
+          <p>January 2018 - December 2020</p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <div class="container">
-      <!-- <p>Design inspired by Oskar Wickström - The Monospace Web</p> -->
-      <p style="font-size: 5px; margin-top: 10px;">i use neovim, arch and nixos btw</p>
+    <div class="footer-text">
+      <p>©2024 Levi Manoel | All rights (there are none) reserved</p>
+      <span style="font-size: 5px;">i use neovim, arch and nixos btw</span>
     </div>
   </footer>
 </body>
