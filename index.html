@@ -4,431 +4,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Levi Manoel - Software Engineer</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
-    :root {
-      --bg-color: #0c0c0c;
-      --text-color: #33ff33;
-      --dim-color: #1a4d1a;
-      --highlight: #50fa7b;
-      --crt-color: #0f0;
-      --scanline-color: rgba(0, 0, 0, 0.2);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    ::selection {
-      background: var(--text-color);
-      color: var(--bg-color);
-    }
-
-    body {
-      font-family: 'Share Tech Mono', monospace;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
-      min-height: 100vh;
-      padding: 2rem;
-    }
-
-    /* CRT Effect */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%,
-          rgba(0, 0, 0, 0.25) 50%);
-      background-size: 100% 4px;
-      z-index: 1000;
-      pointer-events: none;
-      animation: flicker 0.15s infinite;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at center,
-          transparent 0%,
-          rgba(0, 0, 0, 0.4) 100%);
-      pointer-events: none;
-      z-index: 1001;
-    }
-
-    @keyframes flicker {
-      0% {
-        opacity: 0.97;
-      }
-
-      50% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 0.98;
-      }
-    }
-
-    .cursor {
-      position: fixed;
-      width: 10px;
-      height: 20px;
-      background: var(--text-color);
-      z-index: 1002;
-      pointer-events: none;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-
-      0%,
-      49% {
-        opacity: 1;
-      }
-
-      50%,
-      100% {
-        opacity: 0;
-      }
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
-      border: 2px solid var(--text-color);
-      box-shadow: 0 0 20px var(--dim-color);
-      position: relative;
-    }
-
-    .terminal-header {
-      border-bottom: 2px solid var(--text-color);
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
-      font-family: 'VT323', monospace;
-    }
-
-    .terminal-title {
-      font-size: 2rem;
-      color: var(--highlight);
-    }
-
-    .terminal-prompt {
-      color: var(--text-color);
-      margin-top: 0.5rem;
-    }
-
-    nav {
-      margin: 2rem 0;
-      border-bottom: 1px solid var(--dim-color);
-      padding-bottom: 1rem;
-    }
-
-    .nav-link {
-      color: var(--text-color);
-      text-decoration: none;
-      margin-right: 2rem;
-      position: relative;
-    }
-
-    .nav-link:hover {
-      color: var(--highlight);
-    }
-
-    .nav-link::before {
-      content: '>';
-      margin-right: 0.5rem;
-    }
-
-    section {
-      margin: 3rem 0;
-      padding: 1rem;
-      border: 1px solid var(--dim-color);
-      position: relative;
-    }
-
-    section::before {
-      content: attr(id);
-      position: absolute;
-      top: -1rem;
-      left: 1rem;
-      background: var(--bg-color);
-      padding: 0 0.5rem;
-      color: var(--highlight);
-      font-family: 'VT323', monospace;
-    }
-
-    h2 {
-      color: var(--highlight);
-      font-family: 'VT323', monospace;
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .skill-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 1rem;
-    }
-
-    .skill-item {
-      border: 1px solid var(--dim-color);
-      padding: 0.5rem;
-      text-align: center;
-    }
-
-    .skill-item:hover {
-      background: var(--dim-color);
-      color: var(--highlight);
-    }
-
-    details {
-      margin: 1rem 0;
-    }
-
-    summary {
-      color: var(--highlight);
-      cursor: pointer;
-    }
-
-    summary:hover {
-      text-decoration: underline;
-    }
-
-    ul {
-      list-style-type: none;
-      margin-left: 1rem;
-    }
-
-    li::before {
-      content: '>';
-      color: var(--highlight);
-      margin-right: 0.5rem;
-    }
-
-    footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 2px solid var(--text-color);
-      text-align: center;
-      font-size: 0.8rem;
-    }
-
-    /* Typing effect */
-    .typing {
-      overflow: hidden;
-      white-space: nowrap;
-      animation: typing 3.5s steps(40, end);
-    }
-
-    @keyframes typing {
-      from {
-        width: 0
-      }
-
-      to {
-        width: 100%
-      }
-    }
-
-    .scanlines {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom,
-          transparent 50%,
-          var(--scanline-color) 51%);
-      background-size: 100% 4px;
-      pointer-events: none;
-      z-index: 999;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding: 1rem;
-      }
-
-      .container {
-        padding: 1rem;
-      }
-
-      nav {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .terminal-title {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+  <title>Levi Manoel | Digital Space</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="cursor"></div>
-  <div class="scanlines"></div>
-
+  <div class="noise"></div>
   <div class="container">
-    <header class="terminal-header">
-      <div class="terminal-title typing">SYSTEM: LEVI_MANOEL_OS v1.0</div>
-      <div class="terminal-prompt">> Loading profile...</div>
-      <div class="terminal-prompt">> Access granted...</div>
+    <header>
+      <h1 class="title">Levi Manoel</h1>
+      <p class="subtitle">Software Engineer</p>
     </header>
 
     <nav>
-      <a href="#about" class="nav-link">cd /about</a>
-      <a href="#skills" class="nav-link">cd /skills</a>
-      <a href="#projects" class="nav-link">cd /projects</a>
-      <a href="#experience" class="nav-link">cd /experience</a>
-      <a href="#education" class="nav-link">cd /education</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-item">about</a>
+        <a href="#skills" class="nav-item">skills</a>
+        <a href="#experience" class="nav-item">experience</a>
+        <a href="#education" class="nav-item">education</a>
+      </div>
     </nav>
 
-    <section id="about">
-      <h2>> cat about.txt</h2>
-      <p>
-        Hey, I'm Levi Manoel, a software engineer with experience in JavaScript, TypeScript, Rust, SQL, NoSQL, web
-        development and Google Cloud Platform. Currently, I'm studying to become a data engineer, and I'm also getting
-        my hands dirty with C.
-      </p>
-      <p>
-        When I'm not coding, I'm probably battling with Neovim — and losing most of the time – and coding.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>> ls /usr/local/skills</h2>
-      <div class="skill-grid">
-        <div class="skill-item">JavaScript.bin</div>
-        <div class="skill-item">TypeScript.bin</div>
-        <div class="skill-item">Rust.bin</div>
-        <div class="skill-item">SQL.bin</div>
-        <div class="skill-item">NoSQL.bin</div>
-        <div class="skill-item">React.bin</div>
-        <div class="skill-item">Node.js.bin</div>
-        <div class="skill-item">GoogleCloud.bin</div>
-        <div class="skill-item">Docker.bin</div>
-        <div class="skill-item">Microservices.bin</div>
-        <div class="skill-item">Git.bin</div>
-        <div class="skill-item">RESTful.bin</div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>> ls /home/projects</h2>
-      <p>directory empty...</p>
-    </section>
-
-    <section id="experience">
-      <h2>> cat experience.log</h2>
-      <div class="experience-item">
-        <h3>Software Engineer at iRancho</h3>
-        <p class="terminal-prompt">Runtime: May 2022 - Present</p>
-        <p>Stack: JavaScript, TypeScript, Rust, microservices, MySQL, PostgreSQL, etc…</p>
-
-        <details>
-          <summary>cat software_engineering.log</summary>
-          <ul>
-            <li>Pioneered the company's adoption of microservices, designing and implementing the first service within
-              this architecture, which laid the groundwork for future development.</li>
-            <li>Developed a standardized, user-friendly reporting feature that was subsequently adopted across the
-              organization, enhancing data accessibility and analysis for end-users.</li>
-            <li>Gained a deep understanding of the agricultural domain, including agronomy principles, enabling
-              effective collaboration and contribution to projects with domain experts.</li>
-            <li>Excelled in a support role, demonstrating a commitment to resolving user issues, even in challenging
-              situations, and consistently providing exceptional service.</li>
-            <li>Collaborated on the development of a blockchain-based infrastructure for beef supply chain traceability,
-              enhancing product transparency, consumer trust, and sustainability while ensuring compliance with
-              governmental norms.</li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>cat data_engineering.log</summary>
-          <p>file empty... (maybe never, we'll see)</p>
-        </details>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2>> cat education.log</h2>
-      <div class="education-item">
-        <h3>Web Development</h3>
-        <p class="terminal-prompt">Location: Trybe</p>
-        <p class="terminal-prompt">Runtime: June 2021 - June 2022</p>
-        <details>
-          <summary>cat course_details.log</summary>
-          <ul>
-            <li>Fundamentals of Web Development: Unix & Bash, Git, JS Basic & DOM, HTML, CSS, JS ES6, Higher Order
-              Functions and Unit Tests, and agile methodologies.</li>
-            <li>Front-End: Component Life Cycle, State and Events, Controlled Components, Router, RTL Tests, Redux with
-              React, Context API, React Hooks, agile methodologies and soft skills.</li>
-            <li>Back-End: Docker, SQL and NoSQL databases, Node.js and Express, Mocha, Chai and Sinon, APIs, REST, JWT,
-              ORM, deployment, TypeScript, OOP, SOLID, concepts of CI/CD with Github Actions.</li>
-            <li>Computer Science: Python and OOP, Algorithms and Complexity, Data Structures and Problem Solving, agile
-              methodologies and soft skills.</li>
-          </ul>
-        </details>
-      </div>
-
-      <div class="education-item">
-        <h3>Integrated Technical Course, Internet Computing Technician</h3>
-        <p class="terminal-prompt">Location: Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano
+    <main>
+      <section id="about" class="section">
+        <p class="about-text">
+          Software engineer with experience in JavaScript, TypeScript, Rust, SQL, NoSQL, web development and Google
+          Cloud Platform. Currently studying data engineering and exploring C.
         </p>
-        <p class="terminal-prompt">Runtime: January 2018 - December 2020</p>
-      </div>
-    </section>
+        <p class="about-text secondary">
+          When I'm not coding, I'm probably battling with Neovim — and losing most of the time - and coding.
+        </p>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-items">
+              <span>TypeScript</span>
+              <span>JavaScript</span>
+              <span>Rust</span>
+              <span>SQL</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Technologies</h3>
+            <div class="skill-items">
+              <span>Node.js</span>
+              <span>React</span>
+              <span>Docker</span>
+              <span>GCP</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Concepts</h3>
+            <div class="skill-items">
+              <span>Microservices</span>
+              <span>RESTful APIs</span>
+              <span>NoSQL</span>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>Software Engineer @ iRancho</h3>
+            <span class="date">2022 - Present</span>
+          </div>
+          <ul class="experience-details">
+            <li>Pioneered microservices architecture adoption</li>
+            <li>Developed standardized reporting features</li>
+            <li>Built blockchain-based supply chain infrastructure</li>
+            <li>Mastered agricultural domain knowledge</li>
+            <li>Led support and issue resolution</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="education-item">
+          <div class="education-header">
+            <h3>Web Development</h3>
+            <span class="date">Trybe • 2021 - 2022</span>
+          </div>
+          <ul class="education-details">
+            <li>Full-stack development fundamentals</li>
+            <li>Front-end frameworks and state management</li>
+            <li>Back-end architecture and databases</li>
+            <li>Computer Science fundamentals</li>
+          </ul>
+        </div>
+
+        <div class="education-item">
+          <div class="education-header">
+            <h3>Internet Computing Technician</h3>
+            <span class="date">IF Sertão-PE • 2018 - 2020</span>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <p>© 1970 Levi Manoel | /dev/null rights reserved</p>
-      <p style="font-size: 8px;">alias editor='neovim' && (export OS='arch' || export OS='nixos')</p>
+      <div class="social-links">
+        <a href="https://github.com/levi-manoel" target="_blank" class="social-link">github</a>
+        <a href="https://linkedin.com/in/levi-manoel" target="_blank" class="social-link">linkedin</a>
+      </div>
+      <div class="footer-note">
+        <span>alias editor='neovim'</span>
+        <span>export OS='arch || nixos'</span>
+      </div>
     </footer>
   </div>
-
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    document.querySelectorAll('section').forEach(section => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.animation = 'typing 1s forwards';
-            setTimeout(() => {
-              entry.target.style.opacity = '1';
-            }, 100);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      observer.observe(section);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
