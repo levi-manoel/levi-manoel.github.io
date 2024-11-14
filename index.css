@@ -4,10 +4,10 @@
   --font-family: "Victor Mono", monospace;
   --line-height: 1.20rem;
   --border-thickness: 2px;
-  --text-color: #080808;
-  --text-color-alt: #202327;
-  --background-color: #E7E9EA;
-  --background-color-alt: #D1D3D4;
+  --text-color: #0d1117;
+  --text-color-alt: #161b22;
+  --background-color: #c6cdd5;
+  --background-color-alt: #89929b;
 
   --font-weight-normal: 500;
   --font-weight-medium: 600;
@@ -23,10 +23,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: 	#E7E9EA;
-    --text-color-alt: #D1D3D4;
-    --background-color: #080808;
-    --background-color-alt: #202327;
+    --text-color: 	#c6cdd5;
+    --text-color-alt: #89929b;
+    --background-color: #0d1117;
+    --background-color-alt: #161b22;
   }
 }
 
