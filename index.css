@@ -1,17 +1,40 @@
-@import url('https://fonts.cdnfonts.com/css/victor-mono');
+@font-face {
+  font-family: 'MonaspaceArgon';
+  src: url('fonts/MonaspaceArgon-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MonaspaceKrypton';
+  src: url('fonts/MonaspaceKrypton-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MonaspaceNeon';
+  src: url('fonts/MonaspaceNeon-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MonaspaceRadon';
+  src: url('fonts/MonaspaceRadon-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MonaspaceXenon';
+  src: url('fonts/MonaspaceXenon-Regular.woff') format('woff');
+}
 
 :root {
-  --font-family: "Victor Mono", monospace;
-  --line-height: 1.20rem;
+  --font-family: "MonaspaceKrypton", monospace;
+  --line-height: 1.25rem;
   --border-thickness: 2px;
   --text-color: #0d1117;
   --text-color-alt: #161b22;
   --background-color: #c6cdd5;
   --background-color-alt: #89929b;
 
-  --font-weight-normal: 500;
-  --font-weight-medium: 600;
-  --font-weight-bold: 800;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 
   font-family: var(--font-family);
   font-optical-sizing: auto;
