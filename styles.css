@@ -27,7 +27,7 @@ h3 {
 
 h2,
 h3 {
-    padding-top: 1em;
+    padding-top: 2em;
 }
 
 nav ul {
@@ -60,6 +60,10 @@ details summary {
 
 details div {
     margin: 1em;
+}
+
+details div h3 {
+    padding: 0;
 }
 
 footer {

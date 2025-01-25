@@ -1,46 +1,104 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="generator" content="pandoc" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, 
-    user-scalable=yes" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, 
+    user-scalable=yes"
+    />
     <meta name="dcterms.date" content="2024-10-31" />
     <title>Levi Manoel</title>
-    <!-- <link rel="stylesheet" href="reset.css" /> -->
     <link rel="stylesheet" href="styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="title">Levi Manoel</h1>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="/index.html">home</a></li>
-                    <li><a href="/notes.html">notes</a></li>
-                </ul>
-            </nav>
-        </div>
+      <h1>Levi Manoel</h1>
+      <div>
+        <nav>
+          <ul>
+            <li><a href="/index.html">home</a></li>
+            <li><a href="/notes.html">notes</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <h2 id="introduction">Notes</h2>
+    <h2>Notes</h2>
     <em>me no good with words, so you no expect much</em>
 
-    <div>
-        <h3></h3>
-    </div>
+    <details>
+      <summary>2025-01-24</summary>
+      <div>
+        <h3>First downside of Devenv</h3>
+
+        <p>
+          Don't get me wrong, Devenv is a big hand on the wheel, but today I
+          encountered what, for me, is a downside. I'm working on a project that
+          uses Bun on the backend, and yesterday (I think) Bun 1.2 was released.
+          But since the default on the team is to use Devenv, and it uses Nix, I
+          need to wait for Bun to be updated in nixpkgs.
+        </p>
+
+        <p>
+          <em
+            >Apparently the part of the text that relates to the title ends
+            here, thanks for your attention.</em
+          >
+        </p>
+
+        <p>
+          This remember me a frustration I had these days. Normally, on my work
+          notebook, I'm running NixOS, but one day I woke up and wanted to try
+          something different, just to remember how a "normal system" works. So
+          I went trying other distros.
+        </p>
+
+        <p>
+          First, I tried Debian. It was good; I installed i3 and set up my work
+          environment without Devenv, and it was much nicer than I remember. But
+          I couldn't easily install some newer versions of some packages, and
+          that's okay; it's the idea of the distro. Since I was in a "free time,
+          nothing better to do" mood, I went with Arch,
+          <em><strong>btw</strong></em
+          >. Me like Arch. I followed the installation guide, booted, didn't
+          work. I refollowed the installation guide, then booted, and katchow,
+          didn't work. Clearly a skill issue with partitioning the disk, but
+          third time's the charm. I went with GNOME on Arch because I like
+          GNOME. Set up my work environment, and again, a much better experience
+          than I remember. But life is hard, and apparently, my notebook likes
+          NixOS. Why?
+        </p>
+
+        <p>
+          The TypeScript LSP was very slow—20 seconds to show the suggestions of
+          a type defined in the file, slow. Why not write code without
+          autocomplete? I could give 200 reasons with another 100 reasons inside
+          each one (database tables). And not only in Vscode, I used Neovim,
+          also <em><strong>btw</strong></em
+          >, and it was slow there too, I even installed a Neovim plugin that is
+          faster that the LSP integration, it really was faster, like, 5 seconds
+          faster. I tried to fix it; my friend tried to fix it; my friend who's
+          my boss tried—no success. Last try to have a "normal" distro:
+          Pop!_OS—not <em><strong>btw</strong></em
+          >, I know. My previous everyday distro. I only switched from it
+          because one day the kernel update broke my audio, and nothing fixed
+          it. So, at the time, I tried NixOS (because a friend of mine talked a
+          lot about it), and the TypeScript LSP was also slow.
+        </p>
+
+        <p>So I came back to NixOS, and the LSP was fast again.</p>
+      </div>
+    </details>
 
     <footer>
-        <a target="_blank" href="https://github.com/levi-manoel">
-            Github
-        </a>
-        |
-        <a target="_blank" href="https://www.linkedin.com/in/levi-manoel/">
-            LinkedIn
-        </a>
+      <a target="_blank" href="https://github.com/levi-manoel"> Github </a>
+      |
+      <a target="_blank" href="https://www.linkedin.com/in/levi-manoel/">
+        LinkedIn
+      </a>
     </footer>
-</body>
-
+  </body>
 </html>
