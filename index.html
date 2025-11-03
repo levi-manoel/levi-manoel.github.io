@@ -334,14 +334,16 @@
                 <section id="about">
                     <h2>About Me</h2>
                     <p>
-                        Hey, I'm Levi Manoel, a software engineer with experience in
-                        JavaScript, TypeScript, Rust, SQL, NoSQL, web development and Google
-                        Cloud Platform. Right now, I'm studying to become a data engineer,
-                        and I'm also getting my hands dirty with C.
+                        Hey, I'm Levi Manoel, a software engineer with experience
+                        in JavaScript, TypeScript, Rust, Lua, SQL, NoSQL, web development, and Google Cloud Platform
+
+                        I'm currently focused on strengthening my core skills.
+                        I think mastering the fundamentals is key to building deeper competence,
+                        I'm also getting my hands dirty with C.
                     </p>
                     <p>
-                        When I'm not coding, I'm probably battling with Neovim — and losing
-                        most of the time - and coding.
+                        When I'm not coding, I'm probably battling with Neovim
+                        — and losing most of the time - and coding.
                     </p>
                 </section>
 
@@ -352,9 +354,7 @@
 
                 <section id="projects">
                     <h2>Featured Projects</h2>
-                    <p>
-                        New projects are currently in development. Please check back soon!
-                    </p>
+                    <div id="projectsContainer">None, for now.</div>
                 </section>
 
                 <section id="education">
@@ -369,168 +369,253 @@
         </div>
 
         <script>
-            const workExperience = [
-                {
-                    title: "Software Engineer",
-                    company: "iRancho",
-                    companyUrl: "http://www.irancho.com.br",
-                    date: "May 2022 - Present",
-                    technologies: ["JavaScript", "TypeScript", "Rust", "Microservices", "MySQL", "PostgreSQL"],
-                    details: [
-                        "Pioneered the company's adoption of microservices, designing and implementing the first service within this architecture, which laid the groundwork for future development.",
-                        "Developed a standardized, user-friendly reporting feature that was subsequently adopted across the organization, enhancing data accessibility and analysis for end-users.",
-                        "Gained a deep understanding of the agricultural domain, including agronomy principles, enabling effective collaboration and contribution to projects with domain experts.",
-                        "Excelled in a support role, demonstrating a commitment to resolving user issues, even in challenging situations, and consistently providing exceptional service.",
-                        "Collaborated on the development of a blockchain-based infrastructure for beef supply chain traceability, enhancing product transparency, consumer trust, and sustainability while ensuring compliance with governmental norms.",
-                        "Supported the development team by participating in technical interviews and streamlining onboarding processes, which accelerated new hire time-to-productivity.",
-                        "Worked with colleagues to redesign critical systems for improved performance and user experience, including optimizing batch processing architecture to handle a 10x increase in data volume, resulting in reduced infrastructure costs.",
-                        "Provided guidance and support to the team on maintaining the production environment, implementing new features and improvements, and troubleshooting issues in mobile and web applications.",
-                        "Collaborated on the development and maintenance of offline-first features and Bluetooth communication functionalities.",
-                        "Assisted in identifying and addressing vulnerabilities to ensure system security."
-                    ]
-                }
-            ];
+        const workExperience = [
+            {
+                title: "Software Engineer",
+                company: "iRancho",
+                companyUrl: "http://www.irancho.com.br",
+                date: "May 2022 - Present",
+                technologies: ["JavaScript", "TypeScript", "Rust", "Microservices", "MySQL", "PostgreSQL"],
+                details: [
+                    "Pioneered the company's adoption of microservices, designing and implementing the first service within this architecture, which laid the groundwork for future development.",
+                    "Developed a standardized, user-friendly reporting feature that was subsequently adopted across the organization, enhancing data accessibility and analysis for end-users.",
+                    "Gained a deep understanding of the agricultural domain, including agronomy principles, enabling effective collaboration and contribution to projects with domain experts.",
+                    "Excelled in a support role, demonstrating a commitment to resolving user issues, even in challenging situations, and consistently providing exceptional service.",
+                    "Collaborated on the development of a blockchain-based infrastructure for beef supply chain traceability, enhancing product transparency, consumer trust, and sustainability while ensuring compliance with governmental norms.",
+                    "Supported the development team by participating in technical interviews and streamlining onboarding processes, which accelerated new hire time-to-productivity.",
+                    "Worked with colleagues to redesign critical systems for improved performance and user experience, including optimizing batch processing architecture to handle a 10x increase in data volume, resulting in reduced infrastructure costs.",
+                    "Provided guidance and support to the team on maintaining the production environment, implementing new features and improvements, and troubleshooting issues in mobile and web applications.",
+                    "Collaborated on the development and maintenance of offline-first features and Bluetooth communication functionalities.",
+                    "Assisted in identifying and addressing vulnerabilities to ensure system security."
+                ]
+            }
+        ];
 
-            const education = [
-                {
-                    degree: "Integrated Technical Course, Internet Computing Technician",
-                    institution: "Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano",
-                    institutionUrl: "https://portal.ifpe.edu.br/belo-jardim/",
-                    date: "January 2018 - December 2020",
-                    certificates: []
-                },
-                {
-                    degree: "Web development",
-                    institution: "Trybe",
-                    institutionUrl: "https://www.betrybe.com/",
-                    date: "June 2021 - June 2022",
-                    certificates: [
-                        {
-                            title: "Fundamentals of Web Development",
-                            description: "The person that has received this certification has completed the Fundamentals of Web Development module successfully. During this module, the following skills were learned: Unix & Bash, Git, JS Basic & DOM, HTML, CSS, JS ES6, Higher Order Functions and Unit Tests, and agile."
-                        },
-                        {
-                            title: "Front-End",
-                            description: "The person that has received this certification has completed the Front-End Development module successfully. During this module, the following skills were learned: Life Cycle, State and Events, Controlled Components, Router, RTL Tests, Redux with React, Context API, React Hooks, agile and soft skills."
-                        },
-                        {
-                            title: "Back-End",
-                            description: "The person that has received this certification has completed the Back-End Development module successfully. During this module, the following skills were learned: Docker, data base SQL and NoSQL, Node.js and Express, Mocha, Chai and Sinon, APIs, REST, JWT, ORM, deploy, TypeScript, POO, SOLID, concepts of CI/CD with Github Actions."
-                        },
-                        {
-                            title: "Computer Science",
-                            description: "The student that has received this certification has completed the Computer Science module successfully. During this module, the following skills were learned: Python and OOP, Algorithms and Complexity, Data Structure and Problem Solving, agile and soft skills."
-                        }
-                    ]
-                }
-            ];
+        const education = [
+            {
+                degree: "Integrated Technical Course, Internet Computing Technician",
+                institution: "Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano",
+                institutionUrl: "https://portal.ifpe.edu.br/belo-jardim/",
+                date: "January 2018 - December 2020",
+                certificates: []
+            },
+            {
+                degree: "Web development",
+                institution: "Trybe",
+                institutionUrl: "https://www.betrybe.com/",
+                date: "June 2021 - June 2022",
+                certificates: [
+                    {
+                        title: "Fundamentals of Web Development",
+                        description: "The person that has received this certification has completed the Fundamentals of Web Development module successfully. During this module, the following skills were learned: Unix & Bash, Git, JS Basic & DOM, HTML, CSS, JS ES6, Higher Order Functions and Unit Tests, and agile."
+                    },
+                    {
+                        title: "Front-End",
+                        description: "The person that has received this certification has completed the Front-End Development module successfully. During this module, the following skills were learned: Life Cycle, State and Events, Controlled Components, Router, RTL Tests, Redux with React, Context API, React Hooks, agile and soft skills."
+                    },
+                    {
+                        title: "Back-End",
+                        description: "The person that has received this certification has completed the Back-End Development module successfully. During this module, the following skills were learned: Docker, data base SQL and NoSQL, Node.js and Express, Mocha, Chai and Sinon, APIs, REST, JWT, ORM, deploy, TypeScript, POO, SOLID, concepts of CI/CD with Github Actions."
+                    },
+                    {
+                        title: "Computer Science",
+                        description: "The student that has received this certification has completed the Computer Science module successfully. During this module, the following skills were learned: Python and OOP, Algorithms and Complexity, Data Structure and Problem Solving, agile and soft skills."
+                    }
+                ]
+            }
+        ];
 
-            function renderWorkExperience() {
-                const container = document.getElementById('experienceContainer');
-                container.innerHTML = '';
+        const projects = [
+            {
+                title: "Portfolio Website",
+                description: "A rustic, old-school minimalist portfolio built with vanilla JavaScript. Features dynamic content rendering and dark theme support.",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                demoUrl: "#",
+                repoUrl: "https://github.com/levi-manoel",
+                highlights: [
+                    "Fully responsive design with mobile-first approach",
+                    "Dynamic content rendering from JavaScript arrays",
+                    "Dark/light theme toggle with localStorage persistence",
+                    "Vintage terminal-inspired aesthetic"
+                ]
+            }
+        ];
 
-                workExperience.forEach(job => {
-                    const jobDiv = document.createElement('div');
-                    jobDiv.className = 'job';
+        function renderWorkExperience() {
+            const container = document.getElementById('experienceContainer');
+            container.innerHTML = '';
 
-                    const title = document.createElement('h3');
-                    title.innerHTML = `${job.title} at <a href="${job.companyUrl}">${job.company}</a>`;
-                    jobDiv.appendChild(title);
+            workExperience.forEach(job => {
+                const jobDiv = document.createElement('div');
+                jobDiv.className = 'job';
 
-                    const date = document.createElement('p');
-                    date.className = 'job-date';
-                    date.textContent = job.date;
-                    jobDiv.appendChild(date);
+                const title = document.createElement('h3');
+                title.innerHTML = `${job.title} at <a href="${job.companyUrl}">${job.company}</a>`;
+                jobDiv.appendChild(title);
 
-                    const techTags = document.createElement('div');
-                    techTags.className = 'tech-tags';
-                    job.technologies.forEach(tech => {
-                        const tag = document.createElement('span');
-                        tag.textContent = tech;
-                        techTags.appendChild(tag);
+                const date = document.createElement('p');
+                date.className = 'job-date';
+                date.textContent = job.date;
+                jobDiv.appendChild(date);
+
+                const techTags = document.createElement('div');
+                techTags.className = 'tech-tags';
+                job.technologies.forEach(tech => {
+                    const tag = document.createElement('span');
+                    tag.textContent = tech;
+                    techTags.appendChild(tag);
+                });
+                jobDiv.appendChild(techTags);
+
+                if (job.details && job.details.length > 0) {
+                    const details = document.createElement('details');
+                    const summary = document.createElement('summary');
+                    summary.textContent = 'Details';
+                    details.appendChild(summary);
+
+                    const ul = document.createElement('ul');
+                    ul.className = 'job-description';
+                    job.details.forEach(detail => {
+                        const li = document.createElement('li');
+                        li.textContent = detail;
+                        ul.appendChild(li);
                     });
-                    jobDiv.appendChild(techTags);
+                    details.appendChild(ul);
+                    jobDiv.appendChild(details);
+                }
 
-                    if (job.details && job.details.length > 0) {
+                container.appendChild(jobDiv);
+            });
+        }
+
+        function renderEducation() {
+            const container = document.getElementById('educationContainer');
+            container.innerHTML = '';
+
+            education.forEach(edu => {
+                const eduDiv = document.createElement('div');
+                eduDiv.className = 'education-item';
+
+                const title = document.createElement('h3');
+                title.innerHTML = `${edu.degree} at <a href="${edu.institutionUrl}">${edu.institution}</a>`;
+                eduDiv.appendChild(title);
+
+                const date = document.createElement('p');
+                date.textContent = edu.date;
+                eduDiv.appendChild(date);
+
+                if (edu.certificates && edu.certificates.length > 0) {
+                    edu.certificates.forEach(cert => {
                         const details = document.createElement('details');
                         const summary = document.createElement('summary');
-                        summary.textContent = 'Details';
+                        summary.textContent = cert.title;
                         details.appendChild(summary);
 
-                        const ul = document.createElement('ul');
-                        ul.className = 'job-description';
-                        job.details.forEach(detail => {
-                            const li = document.createElement('li');
-                            li.textContent = detail;
-                            ul.appendChild(li);
-                        });
-                        details.appendChild(ul);
-                        jobDiv.appendChild(details);
-                    }
+                        const description = document.createElement('div');
+                        description.textContent = cert.description;
+                        details.appendChild(description);
 
-                    container.appendChild(jobDiv);
-                });
-            }
+                        eduDiv.appendChild(details);
+                    });
+                }
 
-            function renderEducation() {
-                const container = document.getElementById('educationContainer');
-                container.innerHTML = '';
-
-                education.forEach(edu => {
-                    const eduDiv = document.createElement('div');
-                    eduDiv.className = 'education-item';
-
-                    const title = document.createElement('h3');
-                    title.innerHTML = `${edu.degree} at <a href="${edu.institutionUrl}">${edu.institution}</a>`;
-                    eduDiv.appendChild(title);
-
-                    const date = document.createElement('p');
-                    date.textContent = edu.date;
-                    eduDiv.appendChild(date);
-
-                    if (edu.certificates && edu.certificates.length > 0) {
-                        edu.certificates.forEach(cert => {
-                            const details = document.createElement('details');
-                            const summary = document.createElement('summary');
-                            summary.textContent = cert.title;
-                            details.appendChild(summary);
-
-                            const description = document.createElement('div');
-                            description.textContent = cert.description;
-                            details.appendChild(description);
-
-                            eduDiv.appendChild(details);
-                        });
-                    }
-
-                    container.appendChild(eduDiv);
-                });
-            }
-
-            function initThemeToggle() {
-                const themeToggle = document.getElementById('themeToggle');
-                const themeText = document.getElementById('themeText');
-                const html = document.documentElement;
-
-                const currentTheme = localStorage.getItem('theme') || 'light';
-                html.setAttribute('data-theme', currentTheme);
-                themeText.textContent = currentTheme === 'dark' ? 'LIGHT' : 'DARK';
-
-                themeToggle.addEventListener('click', () => {
-                    const theme = html.getAttribute('data-theme');
-                    const newTheme = theme === 'light' ? 'dark' : 'light';
-                    
-                    html.setAttribute('data-theme', newTheme);
-                    localStorage.setItem('theme', newTheme);
-                    themeText.textContent = newTheme === 'dark' ? 'LIGHT' : 'DARK';
-                });
-            }
-
-            document.addEventListener('DOMContentLoaded', () => {
-                renderWorkExperience();
-                renderEducation();
-                initThemeToggle();
+                container.appendChild(eduDiv);
             });
+        }
+
+        function renderProjects() {
+            const container = document.getElementById('projectsContainer');
+            container.innerHTML = '';
+
+            projects.forEach(project => {
+                const projectDiv = document.createElement('div');
+                projectDiv.className = 'job';
+
+                const title = document.createElement('h3');
+                title.textContent = project.title;
+                projectDiv.appendChild(title);
+
+                const description = document.createElement('p');
+                description.textContent = project.description;
+                projectDiv.appendChild(description);
+
+                const techTags = document.createElement('div');
+                techTags.className = 'tech-tags';
+                project.technologies.forEach(tech => {
+                    const tag = document.createElement('span');
+                    tag.textContent = tech;
+                    techTags.appendChild(tag);
+                });
+                projectDiv.appendChild(techTags);
+
+                const links = document.createElement('div');
+                links.style.marginTop = '1rem';
+                links.style.display = 'flex';
+                links.style.gap = '1rem';
+
+                if (project.demoUrl) {
+                    const demoLink = document.createElement('a');
+                    demoLink.href = project.demoUrl;
+                    demoLink.textContent = '[DEMO]';
+                    demoLink.target = '_blank';
+                    links.appendChild(demoLink);
+                }
+
+                if (project.repoUrl) {
+                    const repoLink = document.createElement('a');
+                    repoLink.href = project.repoUrl;
+                    repoLink.textContent = '[CODE]';
+                    repoLink.target = '_blank';
+                    links.appendChild(repoLink);
+                }
+
+                projectDiv.appendChild(links);
+
+                if (project.highlights && project.highlights.length > 0) {
+                    const details = document.createElement('details');
+                    const summary = document.createElement('summary');
+                    summary.textContent = 'Highlights';
+                    details.appendChild(summary);
+
+                    const ul = document.createElement('ul');
+                    project.highlights.forEach(highlight => {
+                        const li = document.createElement('li');
+                        li.textContent = highlight;
+                        ul.appendChild(li);
+                    });
+                    details.appendChild(ul);
+                    projectDiv.appendChild(details);
+                }
+
+                container.appendChild(projectDiv);
+            });
+        }
+
+        function initThemeToggle() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeText = document.getElementById('themeText');
+            const html = document.documentElement;
+
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            html.setAttribute('data-theme', currentTheme);
+            themeText.textContent = currentTheme === 'dark' ? 'LIGHT' : 'DARK';
+
+            themeToggle.addEventListener('click', () => {
+                const theme = html.getAttribute('data-theme');
+                const newTheme = theme === 'light' ? 'dark' : 'light';
+
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeText.textContent = newTheme === 'dark' ? 'LIGHT' : 'DARK';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderWorkExperience();
+            // renderProjects();
+            renderEducation();
+            initThemeToggle();
+        });
         </script>
     </body>
 </html>
