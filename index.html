@@ -18,6 +18,21 @@
             --link-color: #007bff;
             --tag-bg: #e9ecef;
             --tag-color: #495057;
+            --footer-color: #888;
+        }
+
+        /* Added dark theme variables */
+        [data-theme="dark"] {
+            --primary-color: #4da3ff;
+            --text-color: #e4e4e7;
+            --bg-color: #0a0a0b;
+            --bg-alt-color: #18181b;
+            --border-color: #27272a;
+            --heading-color: #fafafa;
+            --link-color: #60a5fa;
+            --tag-bg: #27272a;
+            --tag-color: #d4d4d8;
+            --footer-color: #a1a1aa;
         }
 
         body {
@@ -28,6 +43,7 @@
             color: var(--text-color);
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .container {
@@ -100,12 +116,36 @@
 
         .header-intro p {
             font-size: 1.2rem;
-            color: #555;
+            color: var(--text-color);
             margin: 0;
         }
 
         .social-nav a {
             font-size: 1.1rem;
+        }
+
+        /* Added theme toggle button styles */
+        .theme-toggle {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            background-color: var(--bg-alt-color);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background-color: var(--primary-color);
         }
 
         main > section {
@@ -117,11 +157,12 @@
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .job-date {
             font-style: italic;
-            color: #666;
+            color: var(--footer-color);
             margin-bottom: 1rem;
         }
 
@@ -151,12 +192,12 @@
 
         .education-item p {
             font-style: italic;
-            color: #666;
+            color: var(--footer-color);
             margin-bottom: 0.5rem;
         }
 
         details {
-            background: #fff;
+            background: var(--bg-color);
             border: 1px solid var(--border-color);
             border-radius: 5px;
             margin-top: 0.75rem;
@@ -193,7 +234,7 @@
             padding-top: 2rem;
             border-top: 1px solid var(--border-color);
             font-size: 0.9rem;
-            color: #888;
+            color: var(--footer-color);
         }
 
         @media (min-width: 600px) {
@@ -210,6 +251,11 @@
     </head>
 
     <body>
+        <!-- Added theme toggle button -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span id="themeIcon">🌙</span>
+        </button>
+
         <div class="container">
             <header class="site-header">
                 <div class="header-intro">
@@ -240,81 +286,10 @@
                     </p>
                 </section>
 
+                <!-- Work Experience section now dynamically rendered -->
                 <section id="experience">
                     <h2>Work Experience</h2>
-                    <div class="job">
-                        <h3>
-                            Software Engineer at
-                            <a href="http://www.irancho.com.br">iRancho</a>
-                        </h3>
-                        <p class="job-date">May 2022 - Present</p>
-
-                        <div class="tech-tags">
-                            <span>JavaScript</span>
-                            <span>TypeScript</span>
-                            <span>Rust</span>
-                            <span>Microservices</span>
-                            <span>MySQL</span>
-                            <span>PostgreSQL</span>
-                        </div>
-
-                        <details>
-                            <summary>Details</summary>
-                            <ul class="job-description">
-                                <li>
-                                    Pioneered the company's adoption of microservices, designing and
-                                    implementing the first service within this architecture, which
-                                    laid the groundwork for future development.
-                                </li>
-                                <li>
-                                    Developed a standardized, user-friendly reporting feature that
-                                    was subsequently adopted across the organization, enhancing data
-                                    accessibility and analysis for end-users.
-                                </li>
-                                <li>
-                                    Gained a deep understanding of the agricultural domain, including
-                                    agronomy principles, enabling effective collaboration and
-                                    contribution to projects with domain experts.
-                                </li>
-                                <li>
-                                    Excelled in a support role, demonstrating a commitment to
-                                    resolving user issues, even in challenging situations, and
-                                    consistently providing exceptional service.
-                                </li>
-                                <li>
-                                    Collaborated on the development of a blockchain-based
-                                    infrastructure for beef supply chain traceability, enhancing
-                                    product transparency, consumer trust, and sustainability while
-                                    ensuring compliance with governmental norms.
-                                </li>
-                                <li>
-                                    Supported the development team by participating in technical
-                                    interviews and streamlining onboarding processes, which
-                                    accelerated new hire time-to-productivity.
-                                </li>
-                                <li>
-                                    Worked with colleagues to redesign critical systems for improved
-                                    performance and user experience, including optimizing batch
-                                    processing architecture to handle a 10x increase in data volume,
-                                    resulting in reduced infrastructure costs.
-                                </li>
-                                <li>
-                                    Provided guidance and support to the team on maintaining the
-                                    production environment, implementing new features and
-                                    improvements, and troubleshooting issues in mobile and web
-                                    applications.
-                                </li>
-                                <li>
-                                    Collaborated on the development and maintenance of offline-first
-                                    features and Bluetooth communication functionalities.
-                                </li>
-                                <li>
-                                    Assisted in identifying and addressing vulnerabilities to ensure
-                                    system security.
-                                </li>
-                            </ul>
-                        </details>
-                    </div>
+                    <div id="experienceContainer"></div>
                 </section>
 
                 <section id="projects">
@@ -324,68 +299,10 @@
                     </p>
                 </section>
 
+                <!-- Education section now dynamically rendered -->
                 <section id="education">
                     <h2>Education</h2>
-                    <div class="education-item">
-                        <h3>
-                            Integrated Technical Course, Internet Computing Technician at
-                            <a href="https://portal.ifpe.edu.br/belo-jardim/"
-                            >Instituto Federal de Educação, Ciência e Tecnologia do Sertão
-                                Pernambucano</a
-                            >
-                        </h3>
-                        <p>January 2018 - December 2020</p>
-                    </div>
-
-                    <div class="education-item">
-                        <h3>
-                            Web development at
-                            <a href="https://www.betrybe.com/">Trybe</a>
-                        </h3>
-                        <p>June 2021 - June 2022</p>
-
-                        <details>
-                            <summary>Fundamentals of Web Development</summary>
-                            <div>
-                                The person that has received this certification has completed the
-                                Fundamentals of Web Development module successfully. During this
-                                module, the following skills were learned: Unix &amp; Bash, Git,
-                                JS Basic &amp; DOM, HTML, CSS, JS ES6, Higher Order Functions
-                                and Unit Tests, and agile.
-                            </div>
-                        </details>
-                        <details>
-                            <summary>Front-End</summary>
-                            <div>
-                                The person that has received this certification has completed the
-                                Front-End Development module successfully. During this module,
-                                the following skills were learned: Life Cycle, State and Events,
-                                Controlled Components, Router, RTL Tests, Redux with React,
-                                Context API, React Hooks, agile and soft skills.
-                            </div>
-                        </details>
-                        <details>
-                            <summary>Back-End</summary>
-                            <div>
-                                The person that has received this certification has completed the
-                                Back-End Development module successfully. During this module,
-                                the following skills were learned: Docker, data base SQL and
-                                NoSQL, Node.js and Express, Mocha, Chai and Sinon, APIs, REST,
-                                JWT, ORM, deploy, TypeScript, POO, SOLID, concepts of CI/CD with
-                                Github Actions.
-                            </div>
-                        </details>
-                        <details>
-                            <summary>Computer Science</summary>
-                            <div>
-                                The student that has received this certification has completed
-                                the Computer Science module successfully. During this module,
-                                the following skills were learned: Python and OOP, Algorithms
-                                and Complexity, Data Structure and Problem Solving, agile and
-                                soft skills.
-                            </div>
-                        </details>
-                    </div>
+                    <div id="educationContainer"></div>
                 </section>
             </main>
 
@@ -393,5 +310,178 @@
                 <p>&copy; 2025 Levi Manoel. All rights reserved.</p>
             </footer>
         </div>
+
+        <!-- Added JavaScript for dynamic rendering and theme toggle -->
+        <script>
+            // Work Experience Data
+            const workExperience = [
+                {
+                    title: "Software Engineer",
+                    company: "iRancho",
+                    companyUrl: "http://www.irancho.com.br",
+                    date: "May 2022 - Present",
+                    technologies: ["JavaScript", "TypeScript", "Rust", "Microservices", "MySQL", "PostgreSQL"],
+                    details: [
+                        "Pioneered the company's adoption of microservices, designing and implementing the first service within this architecture, which laid the groundwork for future development.",
+                        "Developed a standardized, user-friendly reporting feature that was subsequently adopted across the organization, enhancing data accessibility and analysis for end-users.",
+                        "Gained a deep understanding of the agricultural domain, including agronomy principles, enabling effective collaboration and contribution to projects with domain experts.",
+                        "Excelled in a support role, demonstrating a commitment to resolving user issues, even in challenging situations, and consistently providing exceptional service.",
+                        "Collaborated on the development of a blockchain-based infrastructure for beef supply chain traceability, enhancing product transparency, consumer trust, and sustainability while ensuring compliance with governmental norms.",
+                        "Supported the development team by participating in technical interviews and streamlining onboarding processes, which accelerated new hire time-to-productivity.",
+                        "Worked with colleagues to redesign critical systems for improved performance and user experience, including optimizing batch processing architecture to handle a 10x increase in data volume, resulting in reduced infrastructure costs.",
+                        "Provided guidance and support to the team on maintaining the production environment, implementing new features and improvements, and troubleshooting issues in mobile and web applications.",
+                        "Collaborated on the development and maintenance of offline-first features and Bluetooth communication functionalities.",
+                        "Assisted in identifying and addressing vulnerabilities to ensure system security."
+                    ]
+                }
+            ];
+
+            // Education Data
+            const education = [
+                {
+                    degree: "Integrated Technical Course, Internet Computing Technician",
+                    institution: "Instituto Federal de Educação, Ciência e Tecnologia do Sertão Pernambucano",
+                    institutionUrl: "https://portal.ifpe.edu.br/belo-jardim/",
+                    date: "January 2018 - December 2020",
+                    certificates: []
+                },
+                {
+                    degree: "Web development",
+                    institution: "Trybe",
+                    institutionUrl: "https://www.betrybe.com/",
+                    date: "June 2021 - June 2022",
+                    certificates: [
+                        {
+                            title: "Fundamentals of Web Development",
+                            description: "The person that has received this certification has completed the Fundamentals of Web Development module successfully. During this module, the following skills were learned: Unix & Bash, Git, JS Basic & DOM, HTML, CSS, JS ES6, Higher Order Functions and Unit Tests, and agile."
+                        },
+                        {
+                            title: "Front-End",
+                            description: "The person that has received this certification has completed the Front-End Development module successfully. During this module, the following skills were learned: Life Cycle, State and Events, Controlled Components, Router, RTL Tests, Redux with React, Context API, React Hooks, agile and soft skills."
+                        },
+                        {
+                            title: "Back-End",
+                            description: "The person that has received this certification has completed the Back-End Development module successfully. During this module, the following skills were learned: Docker, data base SQL and NoSQL, Node.js and Express, Mocha, Chai and Sinon, APIs, REST, JWT, ORM, deploy, TypeScript, POO, SOLID, concepts of CI/CD with Github Actions."
+                        },
+                        {
+                            title: "Computer Science",
+                            description: "The student that has received this certification has completed the Computer Science module successfully. During this module, the following skills were learned: Python and OOP, Algorithms and Complexity, Data Structure and Problem Solving, agile and soft skills."
+                        }
+                    ]
+                }
+            ];
+
+            // Render Work Experience
+            function renderWorkExperience() {
+                const container = document.getElementById('experienceContainer');
+                container.innerHTML = '';
+
+                workExperience.forEach(job => {
+                    const jobDiv = document.createElement('div');
+                    jobDiv.className = 'job';
+
+                    const title = document.createElement('h3');
+                    title.innerHTML = `${job.title} at <a href="${job.companyUrl}">${job.company}</a>`;
+                    jobDiv.appendChild(title);
+
+                    const date = document.createElement('p');
+                    date.className = 'job-date';
+                    date.textContent = job.date;
+                    jobDiv.appendChild(date);
+
+                    const techTags = document.createElement('div');
+                    techTags.className = 'tech-tags';
+                    job.technologies.forEach(tech => {
+                        const tag = document.createElement('span');
+                        tag.textContent = tech;
+                        techTags.appendChild(tag);
+                    });
+                    jobDiv.appendChild(techTags);
+
+                    if (job.details && job.details.length > 0) {
+                        const details = document.createElement('details');
+                        const summary = document.createElement('summary');
+                        summary.textContent = 'Details';
+                        details.appendChild(summary);
+
+                        const ul = document.createElement('ul');
+                        ul.className = 'job-description';
+                        job.details.forEach(detail => {
+                            const li = document.createElement('li');
+                            li.textContent = detail;
+                            ul.appendChild(li);
+                        });
+                        details.appendChild(ul);
+                        jobDiv.appendChild(details);
+                    }
+
+                    container.appendChild(jobDiv);
+                });
+            }
+
+            // Render Education
+            function renderEducation() {
+                const container = document.getElementById('educationContainer');
+                container.innerHTML = '';
+
+                education.forEach(edu => {
+                    const eduDiv = document.createElement('div');
+                    eduDiv.className = 'education-item';
+
+                    const title = document.createElement('h3');
+                    title.innerHTML = `${edu.degree} at <a href="${edu.institutionUrl}">${edu.institution}</a>`;
+                    eduDiv.appendChild(title);
+
+                    const date = document.createElement('p');
+                    date.textContent = edu.date;
+                    eduDiv.appendChild(date);
+
+                    if (edu.certificates && edu.certificates.length > 0) {
+                        edu.certificates.forEach(cert => {
+                            const details = document.createElement('details');
+                            const summary = document.createElement('summary');
+                            summary.textContent = cert.title;
+                            details.appendChild(summary);
+
+                            const description = document.createElement('div');
+                            description.textContent = cert.description;
+                            details.appendChild(description);
+
+                            eduDiv.appendChild(details);
+                        });
+                    }
+
+                    container.appendChild(eduDiv);
+                });
+            }
+
+            // Theme Toggle Functionality
+            function initThemeToggle() {
+                const themeToggle = document.getElementById('themeToggle');
+                const themeIcon = document.getElementById('themeIcon');
+                const html = document.documentElement;
+
+                // Check for saved theme preference or default to light mode
+                const currentTheme = localStorage.getItem('theme') || 'light';
+                html.setAttribute('data-theme', currentTheme);
+                themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+                themeToggle.addEventListener('click', () => {
+                    const theme = html.getAttribute('data-theme');
+                    const newTheme = theme === 'light' ? 'dark' : 'light';
+                    
+                    html.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+                });
+            }
+
+            // Initialize everything when DOM is loaded
+            document.addEventListener('DOMContentLoaded', () => {
+                renderWorkExperience();
+                renderEducation();
+                initThemeToggle();
+            });
+        </script>
     </body>
 </html>
