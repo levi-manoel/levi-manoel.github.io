@@ -9,36 +9,36 @@
         <title>Levi Manoel | Software Engineer</title>
         <style>
         :root {
-            --primary-color: #007bff;
-            --text-color: #333;
-            --bg-color: #ffffff;
-            --bg-alt-color: #f8f9fa;
-            --border-color: #dee2e6;
-            --heading-color: #212529;
-            --link-color: #007bff;
-            --tag-bg: #e9ecef;
-            --tag-color: #495057;
-            --footer-color: #888;
+            --primary-color: #8b7355;
+            --text-color: #3a3a3a;
+            --bg-color: #f5f1e8;
+            --bg-alt-color: #e8e3d6;
+            --border-color: #b8a88a;
+            --heading-color: #2d2d2d;
+            --link-color: #6b5d4f;
+            --tag-bg: #d4c9b5;
+            --tag-color: #4a4a4a;
+            --footer-color: #6b6b6b;
+            --accent-color: #9b8b7e;
         }
 
-        /* Added dark theme variables */
         [data-theme="dark"] {
-            --primary-color: #4da3ff;
-            --text-color: #e4e4e7;
-            --bg-color: #0a0a0b;
-            --bg-alt-color: #18181b;
-            --border-color: #27272a;
-            --heading-color: #fafafa;
-            --link-color: #60a5fa;
-            --tag-bg: #27272a;
-            --tag-color: #d4d4d8;
-            --footer-color: #a1a1aa;
+            --primary-color: #a89279;
+            --text-color: #d4cfc4;
+            --bg-color: #1a1814;
+            --bg-alt-color: #252119;
+            --border-color: #4a4238;
+            --heading-color: #e8e3d6;
+            --link-color: #b8a88a;
+            --tag-bg: #3a3328;
+            --tag-color: #c4bfb4;
+            --footer-color: #8a8478;
+            --accent-color: #6b5d4f;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Courier New', 'Courier', monospace;
+            line-height: 1.7;
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
@@ -47,9 +47,9 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
+            padding: 3rem 2rem;
         }
 
         h1,
@@ -57,34 +57,46 @@
         h3 {
             color: var(--heading-color);
             margin-top: 0;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         h2 {
-            font-size: 2rem;
-            border-bottom: 3px solid var(--primary-color);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
-            margin-top: 2.5rem;
+            margin-top: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2::before {
+            content: "// ";
+            color: var(--accent-color);
         }
 
         h3 {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             margin-bottom: 0.25rem;
         }
 
         a {
             color: var(--link-color);
-            text-decoration: none;
+            text-decoration: underline;
             font-weight: 600;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: var(--primary-color);
+            text-decoration: none;
         }
 
         p {
@@ -104,9 +116,10 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 2rem;
-            margin-bottom: 2.5rem;
+            border: 2px solid var(--border-color);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            background-color: var(--bg-alt-color);
         }
 
         .header-intro {
@@ -115,61 +128,76 @@
         }
 
         .header-intro p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--text-color);
             margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .social-nav a {
-            font-size: 1.1rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-bottom: 1px dotted var(--border-color);
         }
 
-        /* Added theme toggle button styles */
         .theme-toggle {
             position: fixed;
             top: 1.5rem;
             right: 1.5rem;
             background-color: var(--bg-alt-color);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 2px solid var(--border-color);
+            padding: 0.5rem 1rem;
             cursor: pointer;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
+            font-family: 'Courier New', 'Courier', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
             z-index: 1000;
+            color: var(--text-color);
         }
 
         .theme-toggle:hover {
-            transform: scale(1.1);
             background-color: var(--primary-color);
+            color: var(--bg-color);
+            border-color: var(--primary-color);
         }
 
         main > section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
 
         .job {
             background-color: var(--bg-alt-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border: 2px solid var(--border-color);
             padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 4px 4px 0 var(--border-color);
         }
 
         .job-date {
             font-style: italic;
             color: var(--footer-color);
             margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .job-date::before {
+            content: "[";
+            color: var(--accent-color);
+        }
+
+        .job-date::after {
+            content: "]";
+            color: var(--accent-color);
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.75rem;
             margin-bottom: 1.5rem;
         }
 
@@ -177,37 +205,61 @@
             background-color: var(--tag-bg);
             color: var(--tag-color);
             padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .tech-tags span::before {
+            content: "<";
+            margin-right: 0.25rem;
+        }
+
+        .tech-tags span::after {
+            content: ">";
+            margin-left: 0.25rem;
         }
 
         .education-item {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--border-color);
+            padding-left: 1.5rem;
         }
 
         .education-item h3 {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
         }
 
         .education-item p {
             font-style: italic;
             color: var(--footer-color);
             margin-bottom: 0.5rem;
+            font-size: 0.9rem;
         }
 
         details {
             background: var(--bg-color);
             border: 1px solid var(--border-color);
-            border-radius: 5px;
-            margin-top: 0.75rem;
+            margin-top: 1rem;
         }
 
         summary {
-            font-weight: 600;
+            font-weight: 700;
             padding: 0.75rem 1rem;
             cursor: pointer;
             outline: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        summary::before {
+            content: "[+] ";
+            color: var(--accent-color);
+        }
+
+        details[open] summary::before {
+            content: "[-] ";
         }
 
         summary:hover {
@@ -226,15 +278,23 @@
             padding: 1rem;
             font-size: 0.95rem;
             background-color: var(--bg-alt-color);
+            border-top: 1px dotted var(--border-color);
         }
 
         .site-footer {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 4rem;
             padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
+            border-top: 2px solid var(--border-color);
+            font-size: 0.85rem;
             color: var(--footer-color);
+        }
+
+        .site-footer::before {
+            content: "---";
+            display: block;
+            margin-bottom: 1rem;
+            color: var(--border-color);
         }
 
         @media (min-width: 600px) {
@@ -251,9 +311,8 @@
     </head>
 
     <body>
-        <!-- Added theme toggle button -->
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <span id="themeIcon">🌙</span>
+            <span id="themeText">DARK</span>
         </button>
 
         <div class="container">
@@ -286,7 +345,6 @@
                     </p>
                 </section>
 
-                <!-- Work Experience section now dynamically rendered -->
                 <section id="experience">
                     <h2>Work Experience</h2>
                     <div id="experienceContainer"></div>
@@ -299,7 +357,6 @@
                     </p>
                 </section>
 
-                <!-- Education section now dynamically rendered -->
                 <section id="education">
                     <h2>Education</h2>
                     <div id="educationContainer"></div>
@@ -311,9 +368,7 @@
             </footer>
         </div>
 
-        <!-- Added JavaScript for dynamic rendering and theme toggle -->
         <script>
-            // Work Experience Data
             const workExperience = [
                 {
                     title: "Software Engineer",
@@ -336,7 +391,6 @@
                 }
             ];
 
-            // Education Data
             const education = [
                 {
                     degree: "Integrated Technical Course, Internet Computing Technician",
@@ -371,7 +425,6 @@
                 }
             ];
 
-            // Render Work Experience
             function renderWorkExperience() {
                 const container = document.getElementById('experienceContainer');
                 container.innerHTML = '';
@@ -419,7 +472,6 @@
                 });
             }
 
-            // Render Education
             function renderEducation() {
                 const container = document.getElementById('educationContainer');
                 container.innerHTML = '';
@@ -455,16 +507,14 @@
                 });
             }
 
-            // Theme Toggle Functionality
             function initThemeToggle() {
                 const themeToggle = document.getElementById('themeToggle');
-                const themeIcon = document.getElementById('themeIcon');
+                const themeText = document.getElementById('themeText');
                 const html = document.documentElement;
 
-                // Check for saved theme preference or default to light mode
                 const currentTheme = localStorage.getItem('theme') || 'light';
                 html.setAttribute('data-theme', currentTheme);
-                themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+                themeText.textContent = currentTheme === 'dark' ? 'LIGHT' : 'DARK';
 
                 themeToggle.addEventListener('click', () => {
                     const theme = html.getAttribute('data-theme');
@@ -472,11 +522,10 @@
                     
                     html.setAttribute('data-theme', newTheme);
                     localStorage.setItem('theme', newTheme);
-                    themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+                    themeText.textContent = newTheme === 'dark' ? 'LIGHT' : 'DARK';
                 });
             }
 
-            // Initialize everything when DOM is loaded
             document.addEventListener('DOMContentLoaded', () => {
                 renderWorkExperience();
                 renderEducation();
